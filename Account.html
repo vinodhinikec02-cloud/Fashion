@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f2f4;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 780px;
+      padding: 36px 40px 48px 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 800;
+      color: #111;
+      letter-spacing: 1px;
+      margin-bottom: 36px;
+    }
+
+    .field-label {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 12px;
+    }
+
+    .input-box {
+      width: 100%;
+      background: #e2e4e7;
+      border: none;
+      border-radius: 18px;
+      padding: 26px 28px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #999;
+      outline: none;
+      margin-bottom: 28px;
+      font-family: inherit;
+    }
+
+    .input-box::placeholder {
+      color: #999;
+      font-weight: 700;
+    }
+     .sign-in-btn {
+      width: 100%;
+      background: #f07068;
+      border: none;
+      border-radius: 18px;
+      padding: 26px;
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>WELCOME</h1>
+
+    <div class="field-label">Email</div>
+    <input class="input-box" type="email" placeholder="Enter a email id" />
+
+    <div class="field-label">Password</div>
+    <input class="input-box" type="password" placeholder="Enter a password" />
+
+    <div class="field-label">Confirm &nbsp;Password</div>
+    <input class="input-box" type="password" placeholder="Enter a password" />
+
+     <button class="sign-in-btn"><a href="Login.html" style="text-decoration: none; color: white;">SIGN UP</a></button>
+  </div>
+</body>
+</html>

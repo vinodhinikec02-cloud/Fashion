@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Method</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #e7e5e5;
+    }
+
+    /* Top header bar */
+    .top-bar {
+      padding: 16px 20px;
+      border-bottom: 1px solid #e0e0e0;
+      background: #fff;
+    }
+
+    .top-bar h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    /* Main background */
+    .main {
+      background-color: #eaf0f0;
+      padding: 30px 20px 40px;
+    }
+
+    /* Checkout title */
+    .main h1 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 26px;
+    }
+
+    /* Stepper */
+    .stepper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .step {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      font-weight: 600;
+      z-index: 1;
+    }
+
+    .step.done {
+      background-color: #3bc83b;
+      color: #fff;
+    }
+
+    .step.active {
+      background-color: #3bc83b;
+      color: #fff;
+    }
+
+    .step.inactive {
+      background-color: #d0d0d0;
+      color: #888;
+    }
+
+    .step-line {
+      width: 130px;
+      height: 3px;
+    }
+
+    .step-line.green {
+      background-color: #3bc83b;
+    }
+
+    .step-line.gray {
+      background-color: #c0c0c0;
+    }
+
+    /* Card */
+    .card {
+      background: #fff;
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      padding: 30px 28px 36px;
+      max-width: 1420px;
+      margin: 0 auto;
+    }
+
+    .card-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 22px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 14px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      color: #222;
+      background: #fff;
+      outline: none;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    .pay-btn {
+      width: 100%;
+      padding: 20px;
+      background-color: #f07060;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      letter-spacing: 0.2px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      padding: 20px 28px 24px 28px;
+      width: 100%;
+      max-width: 1480px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 18px;
+    }
+
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <h2>Payment method</h2>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <h1>Checkout</h1>
+
+    <!-- Stepper -->
+    <div class="stepper">
+      <div class="step done">1</div>
+      <div class="step-line green"></div>
+      <div class="step active">2</div>
+      <div class="step-line gray"></div>
+      <div class="step inactive">3</div>
+    </div>
+
+    <!-- Card -->
+    <div class="card">
+      <div class="card-title">Payment Information</div>
+
+      <div class="form-group">
+        <label>Card Number</label>
+        <input type="text" value="">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Expiry Date</label>
+          <input type="text" value="">
+        </div>
+        <div class="form-group">
+          <label>CVV</label>
+          <input type="text" value="">
+        </div>
+      </div>
+
+      <button class="pay-btn"><a href="order.html" style="text-decoration: none; color: white;">Pay Now</a></button>
+    </div>
+  </div>
+ <div class="card">
+    <div class="card-title">Order Summary</div>
+
+    <div class="item-row">
+      <span>Item 1</span>
+      <span>$29.99</span>
+    </div>
+    <div class="item-row">
+      <span>Item 2</span>
+      <span>$49.99</span>
+    </div>
+    <div class="item-row">
+      <span>Item 3</span>
+      <span>$19.99</span>
+    </div>
+
+    <div class="total-row">
+      <span>Total</span>
+      <span>$99.97</span>
+    </div>
+  </div>
+  <br>
+</body>
+</html>
